@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>INF03 Lab — wersja testowa</title>
   <style>
-    body { margin: 0; background: #eef3f7; color: #172b3a; font: 1.0625rem/1.6 system-ui, sans-serif; }
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #080a08; color: #eaf0e8; font: 1.0625rem/1.6 system-ui, sans-serif; }
     main { max-width: 42rem; margin: clamp(1rem, 6vw, 4rem) auto; padding: 1.25rem; }
-    h1 { margin: 0; font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
-    h2 { margin: 0; font-size: 1.25rem; }
-    section { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 1.5rem); background: white; border: 1px solid #c9d7e2; border-radius: 1rem; }
+    h1 { margin: 0; color: #b7f58b; font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
+    h2 { margin: 0; color: #b7f58b; font-size: 1.25rem; }
+    section { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 1.5rem); background: #141914; border: 1px solid #374b35; border-radius: 1rem; }
     section > :last-child { margin-bottom: 0; }
-    a { color: #114d72; }
-    .download { display: inline-block; padding: .65rem 1rem; border-radius: .5rem; background: #114d72; color: white; font-weight: 700; }
+    a { color: #b7f58b; }
+    :focus-visible { outline: 2px solid #b7f58b; outline-offset: 4px; }
+    summary { cursor: pointer; }
+    .download { display: inline-block; padding: .65rem 1rem; border-radius: .5rem; background: #b7f58b; color: #080a08; font-weight: 700; }
+    .download:hover { background: #d1ffb2; }
     .checksum { overflow-wrap: anywhere; font-size: .9rem; }
   </style>
 </head>
@@ -22,8 +26,9 @@
     <p>Nieoficjalna aplikacja edukacyjna do nauki przed egzaminem INF.03. Zawiera autorskie ćwiczenia z HTML, CSS, JavaScript, PHP i SQL. Wyniki mają charakter treningowy.</p>
     <section aria-labelledby="download-title">
       <h2 id="download-title">Wersja 1.2 Public Beta</h2>
-      <p>Windows x64 · 5,4 MB · Wydawca adasee</p>
+      <p>Windows x64 · 5,4 MB · Autor i wydawca adasee</p>
       <p>Program wymaga zainstalowanego XAMPP z Apache i MariaDB.</p>
+      <p><strong>Pierwsza instalacja wymaga pobrania środowiska Electron.</strong> Potrzebujesz połączenia z internetem, aby je pobrać.</p>
       <p><strong>Instalator jest niepodpisany cyfrowo i nie przeszedł pełnych testów na Windowsie.</strong> To bezpłatna wersja testowa udostępniana bez gwarancji poprawnego działania. Instalacja i korzystanie są dobrowolne i odbywają się na własne ryzyko.</p>
       <p><a class="download" href="INF03BETA.exe" download>Pobierz instalator (.exe)</a></p>
       <details>
