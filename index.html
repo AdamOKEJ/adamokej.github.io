@@ -3,23 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INF03 Lab</title>
+  <title>INF03 Lab — wersja testowa</title>
   <style>
-    body { margin: 0; background: #eef3f7; color: #172b3a; font: 1.125rem/1.6 system-ui, sans-serif; }
-    main { max-width: 38rem; margin: clamp(1rem, 8vw, 6rem) auto; padding: 2rem; }
+    body { margin: 0; background: #eef3f7; color: #172b3a; font: 1.0625rem/1.6 system-ui, sans-serif; }
+    main { max-width: 42rem; margin: clamp(1rem, 6vw, 4rem) auto; padding: 1.25rem; }
     h1 { margin: 0; font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
-    section { margin-top: 2rem; padding: 1.5rem; background: white; border: 1px solid #c9d7e2; border-radius: 1rem; }
     h2 { margin: 0; font-size: 1.25rem; }
-    section p { margin-bottom: 0; }
+    section { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 1.5rem); background: white; border: 1px solid #c9d7e2; border-radius: 1rem; }
+    section > :last-child { margin-bottom: 0; }
+    a { color: #114d72; }
+    .download { display: inline-block; padding: .65rem 1rem; border-radius: .5rem; background: #114d72; color: white; font-weight: 700; }
+    .checksum { overflow-wrap: anywhere; font-size: .9rem; }
   </style>
 </head>
 <body>
   <main>
     <h1>INF03 Lab</h1>
-    <p>Aplikacja edukacyjna do nauki przed egzaminem INF.03.</p>
-    <section>
-      <h2>Wersja 1.2 Public Beta</h2>
-      <p>Instalator jest jeszcze niedostępny do pobrania.</p>
+    <p>Nieoficjalna aplikacja edukacyjna do nauki przed egzaminem INF.03. Zawiera autorskie ćwiczenia z HTML, CSS, JavaScript, PHP i SQL. Wyniki mają charakter treningowy.</p>
+    <section aria-labelledby="download-title">
+      <h2 id="download-title">Wersja 1.2 Public Beta</h2>
+      <p>Windows x64 · 5,4 MB · Wydawca adasee</p>
+      <p>Program wymaga zainstalowanego XAMPP z Apache i MariaDB.</p>
+      <p><strong>Instalator jest niepodpisany cyfrowo i nie przeszedł pełnych testów na Windowsie.</strong> To bezpłatna wersja testowa udostępniana bez gwarancji poprawnego działania. Instalacja i korzystanie są dobrowolne i odbywają się na własne ryzyko.</p>
+      <p><a class="download" href="INF03BETA.exe" download>Pobierz instalator (.exe)</a></p>
+      <details>
+        <summary>Suma kontrolna SHA-256</summary>
+        <p class="checksum"><code>d8b9bd0cfabd350fb3f88c34bf902fbbfb93ea4867626fdeef056e4af13d3989</code></p>
+      </details>
+    </section>
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Prywatność na tej stronie</h2>
+      <p>Strona nie używa własnych plików cookie, analityki, reklam ani formularzy zbierających dane. Hosting zapewnia GitHub Pages. GitHub może przetwarzać dane techniczne, w tym adres IP odwiedzającego.</p>
+      <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Polityka prywatności GitHuba</a></p>
     </section>
   </main>
 </body>
