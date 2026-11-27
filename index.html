@@ -7,6 +7,12 @@
   <title>INF03 Lab · Pobierz Public Beta</title>
   <link rel="stylesheet" href="inf03-aqua.css?v=39f0a32">
   <link rel="stylesheet" href="inf03-demo-highlight.css">
+  <style>
+    .foot .footer-nav { display:flex; flex-wrap:wrap; gap:.4rem 1rem; font-size:.875rem; }
+    .foot .footer-nav a { color:var(--muted); }
+    .foot .footer-nav a:hover, .foot .footer-nav a:focus-visible { color:var(--ink); text-decoration:underline; }
+    @media (max-width:760px) { .foot { align-items:flex-start; flex-direction:column; } }
+  </style>
 </head>
 <body>
   <a class="skip" href="#main">Przejdź do treści</a>
@@ -109,6 +115,16 @@
       <p><strong>E-mail</strong> · <a href="mailto:adamokej@int.pl">adamokej@int.pl</a></p>
     </section>
   </main>
-  <footer class="shell foot"><span>INF03 Lab · adasee</span><a href="#warunki">Warunki korzystania</a></footer>
+  <footer class="shell foot">
+    <span>INF03 Lab · adasee</span>
+    <nav class="footer-nav" aria-label="Menu w stopce">
+      <a href="demo/">Uruchom demo</a>
+      <a href="#pobierz">Pobierz</a>
+      <a href="#xampp">Instalacja</a>
+      <a href="#prywatnosc">Prywatność</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#warunki">Warunki korzystania</a>
+    </nav>
+  </footer>
 </body>
 </html>
