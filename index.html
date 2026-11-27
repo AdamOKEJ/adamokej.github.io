@@ -3,57 +3,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INF03 Lab — wersja testowa</title>
-  <style>
-    :root { color-scheme: dark; }
-    body { margin: 0; background: #080a08; color: #eaf0e8; font: 1.0625rem/1.6 system-ui, sans-serif; }
-    main { max-width: 42rem; margin: clamp(1rem, 6vw, 4rem) auto; padding: 1.25rem; }
-    h1 { margin: 0; color: #b7f58b; font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
-    h2 { margin: 0; color: #b7f58b; font-size: 1.25rem; }
-    section { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 1.5rem); background: #141914; border: 1px solid #374b35; border-radius: 1rem; }
-    section > :last-child { margin-bottom: 0; }
-    a { color: #b7f58b; }
-    :focus-visible { outline: 2px solid #b7f58b; outline-offset: 4px; }
-    summary { cursor: pointer; }
-    .download { display: inline-block; padding: .65rem 1rem; border-radius: .5rem; background: #b7f58b; color: #080a08; font-weight: 700; }
-    .download:hover { background: #d1ffb2; }
-    .checksum { overflow-wrap: anywhere; font-size: .9rem; }
-  </style>
+  <meta name="description" content="INF03 Lab Public Beta – lokalne laboratorium do nauki INF.03. Pobierz wersję XAMPP lub eksperymentalny instalator Windows.">
+  <title>INF03 Lab · Pobierz Public Beta</title>
+  <link rel="stylesheet" href="inf03-aqua.css">
 </head>
 <body>
-  <main>
-    <h1>INF03 Lab</h1>
-    <p>Nieoficjalna aplikacja edukacyjna do nauki przed egzaminem INF.03. Zawiera autorskie ćwiczenia z HTML, CSS, JavaScript, PHP i SQL. Wyniki mają charakter treningowy.</p>
-    <section aria-labelledby="download-title">
-      <h2 id="download-title">Wersja 1.2 Public Beta</h2>
-      <p>Windows x64 · 5,4 MB · Autor i wydawca adasee</p>
-      <p>Program wymaga zainstalowanego XAMPP z Apache i MariaDB.</p>
-      <p><strong>Pierwsza instalacja wymaga pobrania środowiska Electron.</strong> Potrzebujesz połączenia z internetem, aby je pobrać. (Zainstaluje się automatycznie podczas pierwszego uruchomienia programu, później program działa całkowicie offline)</p>
-      <p><strong>Instalator jest niepodpisany cyfrowo i nie przeszedł pełnych testów na Windowsie.</strong> To bezpłatna wersja testowa udostępniana bez gwarancji poprawnego działania. Instalacja i korzystanie są dobrowolne i odbywają się na własne ryzyko.</p>
-      <p><a class="download" href="INF03BETA.exe" download>Pobierz instalator (.exe)</a></p>
-      <details>
-        <summary>Suma kontrolna SHA-256</summary>
-        <p class="checksum"><code>d8b9bd0cfabd350fb3f88c34bf902fbbfb93ea4867626fdeef056e4af13d3989</code></p>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <header class="shell top">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">&lt;/&gt;</span> INF03 Lab</a>
+    <nav aria-label="Menu główne"><a href="#pobierz">Pobierz</a><a href="#xampp">Instalacja</a><a href="#prywatnosc">Prywatność</a></nav>
+  </header>
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="kicker">PUBLIC BETA 1.2.2</p>
+        <h1 id="title">Ćwicz do <em>INF.03</em><br>na swoim komputerze.</h1>
+        <p>Pięć autorskich egzaminów oraz ćwiczenia z SQL, HTML, CSS, JavaScript i PHP. Dwie wersje do lokalnej nauki z XAMPP.</p>
+        <a class="button primary" href="#pobierz">Wybierz wersję</a>
+      </div>
+      <div class="lab" aria-hidden="true">
+        <div class="lab-head"><i></i><i></i><i></i><span>INF03 LAB</span></div>
+        <div class="lab-body"><span class="lab-code">&lt;<b>lab</b>&gt;</span><div class="modules"><span>PHP</span><span>SQL</span><span>JS</span></div><span class="lab-code">&lt;/<b>lab</b>&gt;</span></div>
+      </div>
+    </section>
+    <section id="pobierz" aria-labelledby="download-title">
+      <h2 id="download-title">Pobierz INF03 Lab</h2>
+      <div class="editions">
+        <article class="panel edition">
+          <p class="edition-label">Przeglądarka · ZIP</p>
+          <h3>Wersja XAMPP</h3>
+          <p>Rozpakuj paczkę, uruchom Apache i MySQL oraz zaimportuj konfigurację. Kurs otworzysz pod lokalnym adresem w przeglądarce.</p>
+          <div class="actions"><a class="button primary" href="https://github.com/AdamOKEJ/adamokej.github.io/releases/download/v1.2.2/INF03-Lab-Public-Web-1.2.2-XAMPP.zip">Pobierz ZIP</a><a class="button quiet" href="#xampp">Instrukcja XAMPP</a></div>
+        </article>
+        <article class="panel edition desktop">
+          <p class="edition-label">Windows x64 · EXE</p>
+          <h3>Wersja Public EXE</h3>
+          <p>Łatwiejsza w obsłudze, ale bardziej eksperymentalna. Po instalacji otwierasz aplikację ze skrótu, a program uruchamia potrzebne usługi.</p>
+          <div class="actions"><a class="button primary" href="https://github.com/AdamOKEJ/adamokej.github.io/releases/download/v1.2.2/INF03-Lab-Public-1.2.2-Setup.exe">Pobierz EXE</a><a class="button quiet" href="#exe">Instrukcja EXE</a></div>
+        </article>
+      </div>
+      <details class="panel checksums">
+        <summary>Sumy kontrolne SHA‑256</summary>
+        <p>ZIP XAMPP · <code>c5b40b4111b91013e39b1c6e839de1f69587f975638e474e8ab373ca2cb931e2</code></p>
+        <p>Public EXE · <code>7cc8d6effb99db36b7248c7374f8d0b988ed899d5e0abb710ef434e6b78988bc</code></p>
       </details>
     </section>
-    <section aria-labelledby="xampp-title">
-      <h2 id="xampp-title">XAMPP w innej lokalizacji</h2>
-      <ol>
-        <li>Zamknij INF03 Lab i otwórz folder, w którym jest zainstalowany program.</li>
-        <li>Otwórz w Notatniku plik <code>xampp-path.txt</code> obok <code>INF03 Lab.exe</code>. Jeśli go brakuje, utwórz plik o tej nazwie.</li>
-        <li>Wpisz w pierwszym wierszu pełną ścieżkę do głównego folderu XAMPP, np. <code>D:\Programy\xampp</code>.</li>
-        <li>Zapisz plik i uruchom ponownie INF03 Lab. Apache i MySQL w panelu XAMPP zostaw wyłączone.</li>
+    <section class="guide" id="xampp" aria-labelledby="xampp-title">
+      <div><h2 id="xampp-title">Instalacja XAMPP</h2><p>Pierwsze uruchomienie wymaga jednorazowego importu konfiguracji bazy.</p><div class="actions"><a class="button primary" href="konfiguracja.sql" download>Pobierz konfiguracja.sql</a><a class="button quiet" href="https://www.apachefriends.org/download.html">Pobierz XAMPP</a></div></div>
+      <ol class="panel steps">
+        <li>Zainstaluj XAMPP dla Windows z Apache, MariaDB, PHP i phpMyAdmin.</li>
+        <li>Rozpakuj ZIP. Skopiuj tylko katalog <code>inf03-lab-public</code> do <code>C:\xampp\htdocs</code> lub do katalogu <code>htdocs</code> w swojej instalacji. SQL i dokumenty trzymaj poza <code>htdocs</code>.</li>
+        <li>W panelu XAMPP uruchom <strong>Apache</strong> oraz <strong>MySQL</strong>.</li>
+        <li>Otwórz <a href="http://127.0.0.1/phpmyadmin/">phpMyAdmin</a>. Jako administrator <strong>lokalnej bazy</strong> wybierz <strong>Import</strong>, wskaż <code>konfiguracja.sql</code> i wykonaj import. Skrypt ustawia konta i uprawnienia dla schematów treningowych.</li>
+        <li>Otwórz <a href="http://127.0.0.1/inf03-lab-public/">127.0.0.1/inf03-lab-public/</a>, przeczytaj ostrzeżenie i rozpocznij naukę.</li>
       </ol>
+      <p class="fine guide-note">Apache wymaga obsługi <code>.htaccess</code> i <code>mod_rewrite</code>. PHP wymaga CLI, <code>mysqli</code> oraz <code>proc_open</code>. Przy niestandardowym porcie Apache dopisz go do adresów, a port MySQL ustaw w <code>inf03-lab-public/config.php</code>.</p>
     </section>
-    <section aria-labelledby="contact-title">
-      <h2 id="contact-title">Kontakt</h2>
-      <p>Masz pytanie lub chcesz zgłosić błąd? Napisz na Discordzie do <strong>discorj</strong>.</p>
+    <section class="guide" id="exe" aria-labelledby="exe-title">
+      <div><h2 id="exe-title">Instalacja Public EXE</h2><p>Windows x64 i zgodny XAMPP. Electron 45.5.0 jest już w instalatorze.</p><a class="button quiet" href="https://www.apachefriends.org/download.html">Pobierz XAMPP</a></div>
+      <div class="panel">
+        <ol class="steps plain">
+          <li>Zainstaluj XAMPP z PHP CLI (<code>mysqli</code> i <code>proc_open</code>) oraz narzędziami MariaDB do tworzenia, uruchamiania i obsługi bazy.</li>
+          <li>Uruchom instalator Public EXE jako zwykły użytkownik i wybierz folder instalacji.</li>
+          <li>Otwórz skrót <strong>INF03 Lab Public Beta</strong>. Przy pierwszym starcie przeczytaj ostrzeżenie. Jeśli XAMPP jest w nietypowej lokalizacji, wpisz pełną ścieżkę w <code>xampp-path.txt</code> w folderze programu.</li>
+        </ol>
+        <p class="fine">Launcher sam uruchamia lokalne PHP i tymczasową instancję MariaDB. Nie musisz startować Apache ani MySQL w panelu XAMPP ani importować pliku SQL. W razie błędu sprawdź <code>%LOCALAPPDATA%\INF03Lab-Public\logs</code>.</p>
+      </div>
+      <aside class="notice guide-note"><strong>EXE jest bardziej eksperymentalne niż wersja XAMPP.</strong> Sprawdzono instalację, reinstalację i odinstalowanie. Pełna sesja kursu w oknie Electron z MariaDB pozostaje do sprawdzenia. Instalator i launcher są niepodpisane. Lokalny skan Defendera nie wykrył zagrożeń w aktualnych plikach, ale wcześniejsze wykrycie pozostało niewyjaśnione. Nie wyłączaj ochrony antywirusowej.</aside>
     </section>
-    <section aria-labelledby="privacy-title">
-      <h2 id="privacy-title">Prywatność na tej stronie</h2>
-      <p>Strona nie używa własnych plików cookie, analityki, reklam ani formularzy zbierających dane. Hosting zapewnia GitHub Pages. GitHub może przetwarzać dane techniczne, w tym adres IP odwiedzającego.</p>
-      <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Polityka prywatności GitHuba</a></p>
+    <section id="warunki" class="panel policy" aria-labelledby="terms-title">
+      <h2 id="terms-title">Warunki korzystania i odpowiedzialność</h2>
+      <p>INF03 Lab — adasee. Bezpłatna, nieoficjalna wersja testowa do indywidualnej nauki INF.03. Zestawy i punktacja są autorskie. Projekt nie jest afiliowany z CKE.</p>
+      <p>Obie wersje są przeznaczone wyłącznie do użytku lokalnego i udostępniane bez gwarancji poprawnego działania. Instalacja i korzystanie są dobrowolne i odbywają się na własne ryzyko. W zakresie dopuszczalnym przez prawo wydawca nie ponosi odpowiedzialności za szkody wynikające z instalacji lub użytkowania, w tym za awarie i utratę danych. Nie ogranicza to praw użytkownika wynikających z obowiązujących przepisów.</p>
+      <p>Aplikacja wykonuje rzeczywisty kod PHP, JavaScript i SQL. Izolacja nie jest pełna. Używaj własnego, zaufanego kodu i danych treningowych. Nie wystawiaj backendu do internetu ani sieci lokalnej. Przed testami wykonaj kopię ważnych danych. Zalecana jest odizolowana maszyna wirtualna.</p>
+      <p class="fine">Kod i materiały są przeznaczone do bezpłatnej nauki. Komponenty zewnętrzne mają odrębne licencje. Szczegóły zawiera <code>LICENCJE.txt</code> w każdym wydaniu. Publikacja plików nie nadaje całemu projektowi licencji open source.</p>
+    </section>
+    <section id="prywatnosc" class="panel policy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Prywatność i dane</h2>
+      <p>Kurs działa bez kont, reklam i wbudowanej telemetrii. Dane zapisane przez kurs nie mają dodatkowego szyfrowania. Strona nie używa własnych plików cookie, analityki, reklam ani formularzy zbierających dane. Hosting zapewnia GitHub Pages. GitHub może przetwarzać dane techniczne, w tym adres IP odwiedzającego.</p>
+      <p><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Polityka prywatności GitHuba</a></p><p><strong>XAMPP.</strong> Postępy i historia są w pamięci przeglądarki. Apache może zapisywać logi zależnie od konfiguracji XAMPP. Pliki robocze trafiają poza <code>htdocs</code>, a bazy treningowe są resetowane. Awaria może pozostawić pliki lub schematy.</p>
+      <p><strong>EXE.</strong> Kod, wyniki, ustawienia i historia są w <code>%LOCALAPPDATA%\INF03Lab-Public\profile</code>. Logi trafiają do podfolderu <code>logs</code> obok profilu. Tymczasowa baza i podglądy są zwykle usuwane przy prawidłowym zamknięciu. Odinstalowanie zachowuje profil. Historię można wyeksportować z aplikacji.</p>
     </section>
   </main>
+  <footer class="shell foot"><span>INF03 Lab · adasee</span><a href="#warunki">Warunki korzystania</a></footer>
 </body>
 </html>
