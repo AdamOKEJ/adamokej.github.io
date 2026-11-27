@@ -10,3 +10,14 @@ a{color:var(--aqua);text-underline-offset:.22em}a:focus-visible{outline:2px soli
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .checksums{margin-top:1rem}.checksums summary{cursor:pointer;color:var(--aqua)}.checksums p:first-of-type{margin-top:.75rem}
+
+#kontakt {
+  color: #fff3cf;
+  border-color: #d9aa52a6;
+  background: radial-gradient(ellipse at top right, #795121 0%, transparent 68%), linear-gradient(135deg, #2d1c0b, #493013);
+  box-shadow: 0 14px 40px #180e074d;
+}
+#kontakt h2 { color: #ffe29a; }
+#kontakt p { color: #f2dfbb; }
+#kontakt a, #kontakt code { color: #ffdd85; }
+#kontakt a:hover { color: #fff2c8; }
